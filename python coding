@@ -27,4 +27,27 @@ I/P :
 10.00
 O/P : 1847.4
 ----------------------------------------------------------
-
+import math
+Path = [800, 600, 750, 900, 1400, 1200, 1100, 1500]
+BusStops = [ "TH", "GA", "IC", "HA", "TE", "LU", "NI","CA"]
+Source = input()
+Destination = input()
+if Source in BusStops:
+    m = int(BusStops.index(Source))
+else:
+    print("INVALID OUTPUT")
+    exit()
+if Destination in BusStops:
+    n = int(BusStops.index(Destination))
+else:
+    print("INVALID OUTPUT")
+    exit()
+if m < n:
+    TotalPath = sum(Path[m:n])
+    print(TotalPath)
+else:
+     TotalPath = sum(Path[m+1::]) + sum(Path[:n+1])
+print(float(math.ceil(TotalPath*0.005)),"INR")
+I/P : NI
+      HA
+O/P : 23.0 INR
