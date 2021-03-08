@@ -1,0 +1,30 @@
+
+https://prepinsta.com/tcs-coding-questions/
+
+NoOfInterierWalls = int(input())
+NoOfExterierWalls = int(input())
+n = 0
+m = 0
+for i in range(NoOfInterierWalls):
+    n += float(input())
+TotalInterierWallCost = n * 18
+for j in range(NoOfExterierWalls):
+    m += float(input())
+TotalExterierWallCost = m * 12
+TotalCost = TotalInterierWallCost + TotalExterierWallCost
+print(TotalCost)
+I/P : 
+6
+3
+12.3
+15.2
+12.3
+15.2
+12.3
+15.2
+10.10
+10.10
+10.00
+O/P : 1847.4
+----------------------------------------------------------
+
