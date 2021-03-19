@@ -51,3 +51,28 @@ print(float(math.ceil(TotalPath*0.005)),"INR")
 I/P : NI
       HA
 O/P : 23.0 INR
+------------------------------------------------------------
+GCD of two numbers
+
+import math 
+  
+print("The gcd of 60 and 48 is : ", end="") 
+print(math.gcd(60, 48)) 
+
+Output
+The gcd of 60 and 48 is : 12
+--or--
+Recursion:
+
+def hcf(a, b): 
+    if(b == 0): 
+        return a 
+    else: 
+        return hcf(b, a % b) 
+  
+a = 60
+b = 48
+
+print("The gcd of 60 and 48 is : ", end="") 
+print(hcf(60, 48)) 
+--------------------------------------------------
